@@ -8,32 +8,37 @@
     <link rel="stylesheet" href="/styles/output.css">
 </head>
 
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-neutral-900 text-white font-sans">
 
     <!-- Header -->
-    <header class="bg-neutral-950 fixed top-0 left-0 w-full z-10">
+    <header class="bg-neutral-950 fixed top-0 left-0 w-full z-20">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex flex-col">
                 <h1 class="text-2xl font-bold">Filippo Tonietto</h1>
                 <p class="text-l">Computer Scientist and Game Developer</p>
             </div>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="#projects" class="hover:text-emerald-500">Projects</a></li>
-                    <li><a href="#contact" class="hover:text-emerald-500">Contacts</a></li>
-                </ul>
-            </nav>
+            <div class="flex space-x-6 items-center">
+                <a class="w-10 h-10" href="https://www.linkedin.com/in/filippo-tonietto-3ab38b212/">
+                    <img src="/images/logos/Linkedin.png"></img>
+                </a>
+                <a class="w-10 h-10" href="https://github.com/filippotonietto">
+                    <img src="/images/logos/GitHub.png"></img>
+                </a>
+                <a href="/resources/Filippo_Tonietto.pdf" download>
+                    <button class="bg-emerald-500 text-white py-2 px-4 rounded-full hover:bg-emerald-600">Download CV</button>       
+                </a>
+            </div>
         </div>
     </header>
 
 
     <!-- Hero Section -->
-    <section id="hero" class="h-auto bg-zinc-900 flex items-center mt-20">
+    <section id="hero" class="h-auto bg-neutral-900 flex items-center md:mt-20 mt-36">
         <div class="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-center">
             <!-- Immagine del profilo -->
             <div
                 class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                <img src="/images/01.jpeg" alt="Foto Profilo" class="w-full h-full object-cover">
+                <img src="/images/01.jpeg" alt="Foto Profilo" class="w-full h-full object-cover transform scale-125">
             </div>
             <!-- Descrizione -->
             <div class="text-center md:text-left">
@@ -46,36 +51,65 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="bg-gray-800 py-16">
+    <section id="projects" class="bg-neutral-800 py-8">
         <div class="container mx-auto px-6">
-            <h3 class="text-3xl font-semibold text-center mb-12">Projects</h3>
+            <h3 class="text-4xl font-semibold text-center mb-12">Projects</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
                 <!-- Progetto 1 -->
-                <div class="bg-gray-700 p-6 rounded-lg">
-                    <img src="path/to/project-image.jpg" alt="Project 1" class="w-full rounded-md mb-4">
-                    <h4 class="text-xl font-semibold mb-2">Progetto 1</h4>
-                    <p class="text-gray-400 mb-4">Breve descrizione del progetto.</p>
-                    <a href="#" class="text-blue-400 hover:underline">Scopri di più</a>
+                <div class="bg-neutral-700 p-6 rounded-lg">
+                    <!-- <img src="path/to/project-image.jpg" alt="Project 1" class="w-full rounded-md mb-4"> -->
+                    <div class="">
+                        <div class="items-center flex flex-row-reverse h-10">
+                            <div class="w-20 ml-3">
+                                <img src="/images/logos/Zucchetti.png"></img>
+                            </div>
+                            <div class="w-20">
+                                <img src="/images/logos/UniPD.png"></img>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-auto mt-2 mb-2">
+                        <img src="/images/games/eof/01.png"></img>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Echoes of Form</h4>
+                    <p class="text-gray-400 mb-4">Thesis project developed during my internship at <span class="italic">Zucchetti SpA</span>.</p>
+                    <a href="#" class="text-emerald-500 hover:underline">See more</a>
                 </div>
-                <!-- Aggiungi più progetti -->
+
+                <div class="bg-neutral-700 p-6 rounded-lg">
+                    <!-- <img src="path/to/project-image.jpg" alt="Project 1" class="w-full rounded-md mb-4"> -->
+                    <div class="">
+                        <div class="items-center flex flex-row-reverse h-10">
+                            <div class="w-28 ml-3">
+                                <img src="/images/logos/Horizon.png"></img>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-auto mt-2 mb-2">
+                        <img src="/images/games/office/01.png"></img>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Horizon Cognitive Assessment Platform</h4>
+                    <p class="text-gray-400 mb-4">Multi-purpose virtual environment for the cognitive assessment.</p>
+                    <a href="#" class="text-emerald-500 hover:underline">See more</a>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16">
+    <section id="contacs" class="bg-neutral-900 py-8">
         <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl font-semibold mb-6">Contattami</h3>
-            <p class="text-gray-400 mb-6">Hai un progetto in mente o vuoi saperne di più? Scrivimi!</p>
+            <h3 class="text-4xl font-semibold text-center mb-12">Contact me</h3>
             <form class="max-w-lg mx-auto">
-                <input type="text" placeholder="Nome"
-                    class="w-full px-4 py-2 mb-4 bg-gray-800 border border-gray-700 rounded-md focus:ring-blue-500">
+                <input type="text" placeholder="Name"
+                    class="w-full px-4 py-2 mb-4 bg-neutral-700 border border-neutral-800 rounded-md !focus:ring-emerald-500">
                 <input type="email" placeholder="Email"
-                    class="w-full px-4 py-2 mb-4 bg-gray-800 border border-gray-700 rounded-md focus:ring-blue-500">
-                <textarea placeholder="Messaggio" rows="5"
-                    class="w-full px-4 py-2 mb-4 bg-gray-800 border border-gray-700 rounded-md focus:ring-blue-500"></textarea>
-                <button type="submit"
-                    class="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-full text-white font-semibold">Invia</button>
+                    class="w-full px-4 py-2 mb-4 bg-neutral-700 border border-neutral-800 rounded-md focus:ring-emerald-500">
+                <textarea placeholder="Message" rows="5"
+                    class="w-full px-4 py-2 mb-4 bg-neutral-700 border border-neutral-800 rounded-md focus:ring-emerald-500"></textarea>
+                <button class="bg-emerald-500 text-white py-2 px-4 rounded-full hover:bg-emerald-600">Send</button>
             </form>
         </div>
     </section>
