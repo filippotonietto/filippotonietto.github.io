@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filippo Tonietto</title>
+    <meta name="description" content="Filippo Tonietto, Computer Scientist and Game Developer from Padova, Italy. Explore my portfolio of Unity-based games and projects.">
+    <meta name="keywords" content="Filippo Tonietto, game developer, Unity developer, computer scientist, portfolio, Unity games, Padova, programming, thesis project">
+    <meta name="author" content="Filippo Tonietto">
+    <meta property="og:title" content="Filippo Tonietto | Computer Scientist & Game Developer">
+    <meta property="og:description" content="Explore the projects and portfolio of Filippo Tonietto, a game developer specializing in Unity.">
+    <meta property="og:image" content="/images/01.jpeg">
+    <meta property="og:url" content="https://www.example.com/">
+
+    <title>Filippo Tonietto | Computer Scientist & Game Developer</title>
     <link rel="stylesheet" href="/styles/output.css">
 </head>
 
@@ -17,102 +25,85 @@
                 <h1 class="text-2xl font-bold">Filippo Tonietto</h1>
                 <p class="text-l">Computer Scientist and Game Developer</p>
             </div>
-            <div class="flex space-x-6 items-center">
-                <a class="w-10 h-10" href="https://www.linkedin.com/in/filippo-tonietto-3ab38b212/">
-                    <img src="/images/logos/Linkedin.png"></img>
+            <nav class="flex space-x-6 items-center" aria-label="Social Links">
+                <a class="w-10 h-10" href="https://www.linkedin.com/in/filippo-tonietto-3ab38b212/" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/logos/Linkedin.png" alt="LinkedIn"></img>
                 </a>
-                <a class="w-10 h-10" href="https://github.com/filippotonietto">
-                    <img src="/images/logos/GitHub.png"></img>
+                <a class="w-10 h-10" href="https://github.com/filippotonietto" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/logos/GitHub.png" alt="GitHub"></img>
                 </a>
                 <a href="/resources/Filippo_Tonietto.pdf" download>
-                    <button class="bg-emerald-500 text-white py-2 px-4 rounded-full hover:bg-emerald-600">Download CV</button>       
+                    <button class="bg-emerald-500 text-white py-2 px-4 rounded-full hover:bg-emerald-600" aria-label="Download CV">Download CV</button>
                 </a>
-            </div>
+            </nav>
         </div>
     </header>
 
-
     <!-- Hero Section -->
-    <section id="hero" class="h-auto bg-neutral-900 flex items-center md:mt-20 mt-48">
-        <div class="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-center">
-            <!-- Immagine del profilo -->
-            <div
-                class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                <img src="/images/01.jpeg" alt="Foto Profilo" class="w-full h-full object-cover transform scale-125">
+    <main>
+        <section id="hero" class="h-auto bg-neutral-900 flex items-center md:mt-20 mt-48">
+            <div class="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-center">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                    <img src="/images/01.jpeg" alt="Filippo Tonietto Profile Picture" class="w-full h-full object-cover transform scale-125">
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-5">Hi, I'm Filippo Tonietto</h2>
+                    <p class="text-lg">I'm a <span id="ageValue"></span>-year-old computer scientist and game developer based in Padova, Italy, specialized in creating games using the Unity Engine.</p>
+                </div>
             </div>
-            <!-- Descrizione -->
-            <div class="text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-5">Hi, I'm Filippo Tonietto</h1>
-                    <p class="text-lg">I'm a <span id="ageValue"></span> years old computer scientist and game developer
-                        based in Padova, Italy, specialized in creating games using the Unity Engine.</p>
-                    <!-- <a href="#projects" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 rounded-full text-white font-semibold">Browse my projects</a> -->
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="bg-neutral-800 py-8">
-        <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-semibold text-center mb-12">Projects</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Progetto 1 -->
+        <!-- Projects Section -->
+        <section id="projects" class="bg-neutral-800 py-8">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl font-semibold text-center mb-12">Projects</h3>
                 <div class="bg-neutral-700 p-6 rounded-lg">
-                    <!-- <img src="path/to/project-image.jpg" alt="Project 1" class="w-full rounded-md mb-4"> -->
-                    <div class="">
-                        <div class="items-center flex flex-row-reverse h-10">
-                            <div class="w-20 ml-3">
-                                <img src="/images/logos/Zucchetti.png"></img>
+                    <header class="flex flex-row-reverse h-10 mb-4 items-center">
+                        <img class="w-20 ml-3" src="/images/logos/Zucchetti.png" alt="Zucchetti Logo">
+                        <img class="w-20" src="/images/logos/UniPD.png" alt="University of Padova Logo">
+                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-start">
+                        <div>
+                            <div class="slideshow-container">
+                                <img src="/images/games/eof/01.png" alt="Echoes of Form Screenshot 1" class="w-full rounded-md">
                             </div>
-                            <div class="w-20">
-                                <img src="/images/logos/UniPD.png"></img>
+                            <div class="flex justify-center">
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" onclick="prevSlide()">&#10094;</button>
+                                </div>
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" onclick="nextSlide()">&#10095;</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-auto mt-2 mb-2">
-                        <img src="/images/games/eof/01.png"></img>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-2">Echoes of Form</h4>
-                    <p class="text-gray-400 mb-4">Thesis project developed during my internship at <span class="italic">Zucchetti SpA</span>.</p>
-                    <a href="#" class="text-emerald-500 hover:underline">See more</a>
-                </div>
-
-                <div class="bg-neutral-700 p-6 rounded-lg">
-                    <!-- <img src="path/to/project-image.jpg" alt="Project 1" class="w-full rounded-md mb-4"> -->
-                    <div class="">
-                        <div class="items-center flex flex-row-reverse h-10">
-                            <div class="w-28 ml-3">
-                                <img src="/images/logos/Horizon.png"></img>
+                        <div class="px-2">
+                            <h4 class="text-3xl text-center font-semibold mb-2">Echoes of Form</h4>
+                            <div class="text-gray-400 bg-neutral-800 py-2 px-4 rounded-lg">
+                                <div><strong class="text-white">Development Period:</strong> March 2024 - September 2024</div>
+                                <div><strong class="text-white">Technologies:</strong> Unity, C#, Photoshop</div>
+                                <div><strong class="text-white">Team Size:</strong> 3 people</div>
                             </div>
+                            <p class="text-gray-400 mt-5 ml-3 mr-3">Thesis project developed during my internship at <em>Zucchetti SpA</em>.</p>
                         </div>
                     </div>
-                    <div class="w-auto mt-2 mb-2">
-                        <img src="/images/games/office/01.png"></img>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-2">Horizon Cognitive Assessment Platform</h4>
-                    <p class="text-gray-400 mb-4">Multi-purpose virtual environment for the cognitive assessment.</p>
-                    <a href="#" class="text-emerald-500 hover:underline">See more</a>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contacs" class="bg-neutral-900 py-8">
-        <div class="container mx-auto px-6 text-center">
-            <h3 class="text-4xl font-semibold text-center mb-12">Contact me</h3>
-            <form class="max-w-lg mx-auto">
-                <input type="text" placeholder="Name"
-                    class="w-full px-4 py-2 mb-4 bg-neutral-700 border border-neutral-800 rounded-md !focus:ring-emerald-500">
-                <input type="email" placeholder="Email"
-                    class="w-full px-4 py-2 mb-4 bg-neutral-700 border border-neutral-800 rounded-md focus:ring-emerald-500">
-                <textarea placeholder="Message" rows="5"
-                    class="w-full px-4 py-2 mb-4 bg-neutral-700 border border-neutral-800 rounded-md focus:ring-emerald-500"></textarea>
-                <button class="bg-emerald-500 text-white py-2 px-4 rounded-full hover:bg-emerald-600">Send</button>
-            </form>
-        </div>
-    </section>
+        <!-- Contact Section -->
+        <section id="contacts" class="bg-neutral-900 py-8">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-4xl font-semibold text-center mb-12">Contact Me</h3>
+                <form class="max-w-lg mx-auto" action="mailto:filippo.tonietto@gmail.com" method="POST" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Name" class="w-full px-4 py-2 mb-4 bg-neutral-700 border border-neutral-800 rounded-md focus:ring-emerald-500" required>
+                    <input type="email" name="email" placeholder="Email" class="w-full px-4 py-2 mb-4 bg-neutral-700 border border-neutral-800 rounded-md focus:ring-emerald-500" required>
+                    <textarea name="message" placeholder="Message" rows="5" class="w-full px-4 py-2 mb-4 bg-neutral-700 border border-neutral-800 rounded-md focus:ring-emerald-500" required></textarea>
+                    <button type="submit" class="bg-emerald-500 text-white py-2 px-4 rounded-full hover:bg-emerald-600">Send</button>
+                </form>
+                
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-neutral-950 py-6">
@@ -122,6 +113,7 @@
     </footer>
 
     <script src="/scripts/age.js"></script>
+    <script src="/scripts/slideshow.js"></script>
 </body>
 
 </html>
