@@ -59,36 +59,364 @@
         <section id="projects" class="bg-neutral-800 py-8">
             <div class="container mx-auto px-6">
                 <h3 class="text-4xl font-semibold text-center mb-12">Projects</h3>
-                <div class="bg-neutral-700 p-6 rounded-lg">
+
+                <!-- EOF -->
+                <div class="bg-neutral-700 p-6 rounded-lg mb-6">
                     <header class="flex flex-row-reverse h-10 mb-4 items-center">
-                        <img class="w-20 ml-3" src="/images/logos/Zucchetti.png" alt="Zucchetti Logo">
-                        <img class="w-20" src="/images/logos/UniPD.png" alt="University of Padova Logo">
+                        <img class="w-24 ml-3" src="/images/logos/Zucchetti.png" alt="Zucchetti Logo">
+                        <img class="w-24" src="/images/logos/UniPD.png" alt="University of Padova Logo">
                     </header>
                     <div class="grid grid-cols-1 md:grid-cols-2 items-start">
                         <div>
-                            <div class="slideshow-container">
-                                <img class="slides" src="/images/games/eof/01.png" alt="Echoes of Form Screenshot 1" class="w-full rounded-md"></img>
+                            <div class="slideshow-container" data-carousel>
+                                <img class="slides w-full rounded-md" src="/images/games/eof/01.png" alt="Echoes of Form Screenshot 1">
+                                <img class="slides w-full rounded-md" src="/images/games/eof/02.png" alt="Echoes of Form Screenshot 2">
+                                <img class="slides w-full rounded-md" src="/images/games/eof/03.png" alt="Echoes of Form Screenshot 3">
+                                <img class="slides w-full rounded-md" src="/images/games/eof/04.png" alt="Echoes of Form Screenshot 4">
                             </div>
-                            <div class="flex justify-center">
+                            <div class="flex justify-center mt-2">
                                 <div class="px-2 py-2">
-                                    <button class="bg-neutral-800 text-white p-2 rounded-full" onclick="prevSlide()">&#10094;</button>
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-prev>&#10094;</button>
                                 </div>
                                 <div class="px-2 py-2">
-                                    <button class="bg-neutral-800 text-white p-2 rounded-full" onclick="nextSlide()">&#10095;</button>
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-next>&#10095;</button>
                                 </div>
                             </div>
                         </div>
                         <div class="px-2">
                             <h4 class="text-3xl text-center font-semibold mb-2">Echoes of Form</h4>
                             <div class="text-gray-400 bg-neutral-800 py-2 px-4 rounded-lg">
-                                <div><strong class="text-white">Development Period:</strong> March 2024 - September 2024</div>
-                                <div><strong class="text-white">Technologies:</strong> Unity, C#, Photoshop</div>
-                                <div><strong class="text-white">Team Size:</strong> 3 people</div>
+                                <div><strong class="text-white">Development Period:</strong> September - November 2024</div>
+                                <div><strong class="text-white">Technologies:</strong> Unity, C#, Blender</div>
+                                <div><strong class="text-white">Team Size:</strong> Solo</div>
                             </div>
-                            <p class="text-gray-400 mt-5 ml-3 mr-3">Thesis project developed during my internship at <em>Zucchetti SpA</em>.</p>
+                            <div class="text-gray-400 mt-5 ml-3 mr-3">
+                                <p>Thesis project developed during my internship at <em>Zucchetti SpA</em>.</p>
+                                <p>The idea behind the game came from a realization: 
+                                    <em>STEM</em> students have a very limited knowledge of graphic design concepts, 
+                                    which are actually very useful when it comes to the development of usable applications.</p>
+                                <p>The project, therefore, aims to raise students' awareness of art, by presenting to the user
+                                    a serious themed but engaging gameplay and examples taken from art history.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+
+                <!-- OFFICE -->
+                <div class="bg-neutral-700 p-6 rounded-lg mb-6">
+                    <header class="flex flex-row-reverse h-10 mb-4 items-center">
+                        <img class="w-24 ml-3" src="/images/logos/Horizon.png" alt="Horizon Neuroscience Logo">
+                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-start">
+                        <div>
+                            <div class="slideshow-container">
+                                <img class="slides w-full rounded-md" src="/images/games/office/01.png" alt="Office Game Screenshot 1">
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="text-3xl text-center font-semibold mb-2 md:mt-0 mt-2">Horizon Cognitive Assessment Platform</h4>
+                            <div class="text-gray-400 bg-neutral-800 py-2 px-4 rounded-lg">
+                                <div><strong class="text-white">Development Period:</strong> August 2023 - To Date</div>
+                                <div><strong class="text-white">Technologies:</strong> Unity, C#, brainflow, Azure</div>
+                                <div><strong class="text-white">Team Size:</strong> Various</div>
+                            </div>
+                            <div class="text-gray-400 mt-5 ml-3 mr-3">
+                                <p>Scalable virtual environment used to showcase tasks and games focused on brain and mental health that make use of EEG recording.</p>
+                                <p>Specific details about this project are protected under a non-disclosure agreement (NDA).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+
+                <!-- AI Playground -->
+                <div class="bg-neutral-700 p-6 rounded-lg mb-6">
+                    <header class="flex flex-row-reverse h-10 mb-4 items-center">
+                        <img class="w-24 ml-3" src="/images/logos/Horizon.png" alt="Horizon Neuroscience Logo">
+                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-start">
+                        <div>
+                            <div class="slideshow-container">
+                                <img class="slides w-full rounded-md" src="/images/games/ai-playground/01.png" alt="AI Playground Screenshot 1">
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="text-3xl text-center font-semibold mb-2 md:mt-0 mt-2">"AI-Playground"</h4>
+                            <div class="text-gray-400 bg-neutral-800 py-2 px-4 rounded-lg">
+                                <div><strong class="text-white">Development Period:</strong> October 2023 - To Date</div>
+                                <div><strong class="text-white">Technologies:</strong> Unity, C#, Azure</div>
+                                <div><strong class="text-white">Team Size:</strong> Various</div>
+                            </div>
+                            <div class="text-gray-400 mt-5 ml-3 mr-3">
+                                <p>Virtual environment used to train an AI agent to interact with 3D environments.</p>
+                                <p>Specific details about this project are protected under a non-disclosure agreement (NDA).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+
+                <!-- Cognitive Tasks Suite -->
+                <div class="bg-neutral-700 p-6 rounded-lg mb-6">
+                    <header class="flex flex-row-reverse h-10 mb-4 items-center">
+                        <img class="w-24 ml-3" src="/images/logos/Horizon.png" alt="Horizon Neuroscience Logo">
+                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-start">
+                        <div>
+                            <div class="slideshow-container">
+                                <img class="slides w-full rounded-md" src="/images/games/cognitive-tasks/01.png" alt="Cognitive Tasks Suite Screenshot 1">
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="text-3xl text-center font-semibold mb-2 md:mt-0 mt-2">"Cognitive Tasks Suite"</h4>
+                            <div class="text-gray-400 bg-neutral-800 py-2 px-4 rounded-lg">
+                                <div><strong class="text-white">Development Period:</strong> August 2023 - To Date</div>
+                                <div><strong class="text-white">Technologies:</strong> Unity, C#, brainflow, Azure</div>
+                                <div><strong class="text-white">Team Size:</strong> 1-3</div>
+                            </div>
+                            <div class="text-gray-400 mt-5 ml-3 mr-3">
+                                <p>Collection of gamified cognitive tasks.</p>
+                                <p>Specific details about this project are protected under a non-disclosure agreement (NDA).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+
+                <!-- Neuro FPS -->
+                <div class="bg-neutral-700 p-6 rounded-lg mb-6">
+                    <header class="flex flex-row-reverse h-10 mb-4 items-center">
+                        <img class="w-24 ml-3" src="/images/logos/Horizon.png" alt="Horizon Neuroscience Logo">
+                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-start">
+                        <div>
+                            <div class="slideshow-container">
+                                <img class="slides w-full rounded-md" src="/images/games/cognitive-fps/01.png" alt="Cognitive FPS Screenshot 1">
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="text-3xl text-center font-semibold mb-2 md:mt-0 mt-2">Horizon Cognitive FPS</h4>
+                            <div class="text-gray-400 bg-neutral-800 py-2 px-4 rounded-lg">
+                                <div><strong class="text-white">Development Period:</strong> February 2024 - To Date</div>
+                                <div><strong class="text-white">Technologies:</strong> Unity, C#, brainflow, Azure</div>
+                                <div><strong class="text-white">Team Size:</strong> Solo</div>
+                            </div>
+                            <div class="text-gray-400 mt-5 ml-3 mr-3">
+                                <p>Prototype of an FPS game that can use EEG recordings to modify in-game aspects.</p>
+                                <p>Specific details about this project are protected under a non-disclosure agreement (NDA).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+
+                <!-- Card Piece -->
+                <div class="bg-neutral-700 p-6 rounded-lg mb-6">
+                    <header class="flex flex-row-reverse h-10 mb-4 items-center">
+                        <img class="w-24 ml-3" src="/images/logos/UniPD.png" alt="University of Padova Logo">                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-start">
+                        <div>
+                            <div class="slideshow-container" data-carousel>
+                                <img class="slides w-full rounded-md" src="/images/games/cardpiece/01.jpeg" alt="Card Piece Screenshot 1">
+                                <img class="slides w-full rounded-md" src="/images/games/cardpiece/02.jpeg" alt="Card Piece Screenshot 2">
+                                <img class="slides w-full rounded-md" src="/images/games/cardpiece/03.jpeg" alt="Card Piece Screenshot 3">
+                            </div>
+                            <div class="flex justify-center mt-2">
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-prev>&#10094;</button>
+                                </div>
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-next>&#10095;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="text-3xl text-center font-semibold mb-2">"CardPiece"</h4>
+                            <div class="text-gray-400 bg-neutral-800 py-2 px-4 rounded-lg">
+                                <div><strong class="text-white">Development Period:</strong> April - July 2023 </div>
+                                <div><strong class="text-white">Technologies:</strong> Qt, C++</div>
+                                <div><strong class="text-white">Team Size:</strong> 2</div>
+                            </div>
+                            <div class="text-gray-400 mt-5 ml-3 mr-3">
+                                <p>Class project developed for the "Object Oriented Programming" course.</p>
+                                <p>The assignment was to create an application using the Qt framework with specific requirements in terms of classes, inheritance, data persistance and others.</p>
+                                <p>Working with one of my classmates, we developed a limited digital version of the popular trading card game <em>ONE PIECE CARD GAME</em>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+
+                <!-- BoT -->
+                <div class="bg-neutral-700 p-6 rounded-lg mb-6">
+                    <header class="flex flex-row-reverse h-10 mb-4 items-center">
+                        <img class="w-28 ml-3" src="/images/logos/DBGA.png" alt="University of Padova Logo">                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-start">
+                        <div>
+                            <div class="slideshow-container" data-carousel>
+                                <img class="slides w-full rounded-md" src="/images/games/bot/01.png" alt="Battle of Tezuma Screenshot 1">
+                                <img class="slides w-full rounded-md" src="/images/games/bot/02.png" alt="Battle of Tezuma Screenshot 2">
+                                <img class="slides w-full rounded-md" src="/images/games/bot/03.png" alt="Battle of Tezuma Screenshot 3">
+                                <img class="slides w-full rounded-md" src="/images/games/bot/04.png" alt="Battle of Tezuma Screenshot 4">
+                                <img class="slides w-full rounded-md" src="/images/games/bot/05.png" alt="Battle of Tezuma Screenshot 5">
+                                <img class="slides w-full rounded-md" src="/images/games/bot/06.png" alt="Battle of Tezuma Screenshot 6">
+                                <img class="slides w-full rounded-md" src="/images/games/bot/07.png" alt="Battle of Tezuma Screenshot 7">
+                            </div>
+                            <div class="flex justify-center mt-2">
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-prev>&#10094;</button>
+                                </div>
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-next>&#10095;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="text-3xl text-center font-semibold mb-2">Battle of Tezuma</h4>
+                            <div class="text-gray-400 bg-neutral-800 py-2 px-4 rounded-lg">
+                                <div><strong class="text-white">Development Period:</strong> March - July 2021 </div>
+                                <div><strong class="text-white">Technologies:</strong> Unity, C#, Mirror</div>
+                                <div><strong class="text-white">Team Size:</strong> 13</div>
+                            </div>
+                            <div class="text-gray-400 mt-5 ml-3 mr-3">
+                                <p>RTS, auto-battler, multiplayer game for desktop platforms. 
+                                    You'll be able to play exciting 1-vs-1 matches against your friends, 
+                                    find your own winning strategy by building your deck, combine both Heroes 
+                                    and Units special powers and choose the perfect Tactic to ruin your rival's strategy!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+
+                <!-- Steamboat Wheel -->
+                <div class="bg-neutral-700 p-6 rounded-lg mb-6">
+                    <header class="flex flex-row-reverse h-10 mb-4 items-center">
+                        <img class="w-28 ml-3" src="/images/logos/DBGA.png" alt="University of Padova Logo">                    
+                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-start">
+                        <div>
+                            <div class="slideshow-container" data-carousel>
+                                <img class="slides w-full rounded-md" src="/images/games/steamboat/01.png" alt="Steamboat Wheel Screenshot 1">
+                                <img class="slides w-full rounded-md" src="/images/games/steamboat/02.png" alt="Steamboat Wheel Screenshot 2">
+                                <img class="slides w-full rounded-md" src="/images/games/steamboat/03.png" alt="Steamboat Wheel Screenshot 3">
+                                <img class="slides w-full rounded-md" src="/images/games/steamboat/04.png" alt="Steamboat Wheel Screenshot 4">
+                                <img class="slides w-full rounded-md" src="/images/games/steamboat/05.png" alt="Steamboat Wheel Screenshot 5">
+                                <img class="slides w-full rounded-md" src="/images/games/steamboat/06.png" alt="Steamboat Wheel Screenshot 6">
+                                <img class="slides w-full rounded-md" src="/images/games/steamboat/07.png" alt="Steamboat Wheel Screenshot 7">
+                            </div>
+                            <!-- Bottoni di navigazione centrati -->
+                            <div class="flex justify-center mt-2">
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-prev>&#10094;</button>
+                                </div>
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-next>&#10095;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="text-3xl text-center font-semibold mb-2">Steamboat Wheel</h4>
+                            <div class="text-gray-400 bg-neutral-800 py-2 px-4 rounded-lg">
+                                <div><strong class="text-white">Development Period:</strong> January - February 2021 </div>
+                                <div><strong class="text-white">Technologies:</strong> Unity, C#, HLSL Shading</div>
+                                <div><strong class="text-white">Team Size:</strong> 8</div>
+                            </div>
+                            <div class="text-gray-400 mt-5 ml-3 mr-3">
+                                <p>Casual mobile game with gatcha mechanics. In this game you won't really stop exploring 
+                                    a large open world map filled with hidden treasures and artifacts. 
+                                    But you better watch out not to finish the coal you need to fuel your fully custombizable 
+                                    and upgradable steamboat! You can go on with your jorney by testing your fortune with the 
+                                    Spinning Wheel! The more you spin, the more you win!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Chuck's Conquest -->
+                <div class="bg-neutral-700 p-6 rounded-lg mb-6">
+                    <header class="flex flex-row-reverse h-10 mb-4 items-center">
+                        <img class="w-28 ml-3" src="/images/logos/DBGA.png" alt="University of Padova Logo">                    
+                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-start">
+                        <div>
+                            <div class="slideshow-container" data-carousel>
+                                <img class="slides w-full rounded-md" src="/images/games/chuck/01.jpg" alt="Chuck's Conquest Screenshot 1">
+                                <img class="slides w-full rounded-md" src="/images/games/chuck/02.jpg" alt="Chuck's Conquest Screenshot 2">
+                                <img class="slides w-full rounded-md" src="/images/games/chuck/03.jpg" alt="Chuck's Conquest Screenshot 3">
+                                <img class="slides w-full rounded-md" src="/images/games/chuck/04.jpg" alt="Chuck's Conquest Screenshot 4">
+                                <img class="slides w-full rounded-md" src="/images/games/chuck/05.jpg" alt="Chuck's Conquest Screenshot 5">
+                                <img class="slides w-full rounded-md" src="/images/games/chuck/06.jpg" alt="Chuck's Conquest Screenshot 6">
+                                <img class="slides w-full rounded-md" src="/images/games/chuck/07.jpg" alt="Chuck's Conquest Screenshot 7">
+                                <img class="slides w-full rounded-md" src="/images/games/chuck/08.jpg" alt="Chuck's Conquest Screenshot 8">
+                                <img class="slides w-full rounded-md" src="/images/games/chuck/09.jpg" alt="Chuck's Conquest Screenshot 9">
+                                <img class="slides w-full rounded-md" src="/images/games/chuck/10.jpg" alt="Chuck's Conquest Screenshot 10">
+                            </div>
+                            <!-- Bottoni di navigazione centrati -->
+                            <div class="flex justify-center mt-2">
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-prev>&#10094;</button>
+                                </div>
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-next>&#10095;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="text-3xl text-center font-semibold mb-2">Chuck's Conquest</h4>
+                            <div class="text-gray-400 bg-neutral-800 py-2 px-4 rounded-lg">
+                                <div><strong class="text-white">Development Period:</strong> November - December 2020 </div>
+                                <div><strong class="text-white">Technologies:</strong> Unity, C#</div>
+                                <div><strong class="text-white">Team Size:</strong> 8</div>
+                            </div>
+                            <div class="text-gray-400 mt-5 ml-3 mr-3">
+                                <p>First-person woodchuck simulator, starring Chuck, 
+                                    a friendly beaver sent on a remote planet by The Great Mother Beaverland. 
+                                    His quest is to collect more wood as possible from the strange and exotic 
+                                    trees present on the planet's surface. Will you manage to help Chuck by 
+                                    helping him getting more exciting tools in this immersive and colorful experience?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Babel -->
+                <div class="bg-neutral-700 p-6 rounded-lg mb-6">
+                    <header class="flex flex-row-reverse h-10 mb-4 items-center">
+                        <!-- <img class="w-28 ml-3" src="/images/logos/DBGA.png" alt="University of Padova Logo">                     -->
+                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-start">
+                        <div>
+                            <div class="slideshow-container" data-carousel>
+                                <img class="slides w-full rounded-md" src="/images/games/babel/01.jpg" alt="Babel Screenshot 1">
+                                <img class="slides w-full rounded-md" src="/images/games/babel/02.jpg" alt="Babel Screenshot 2">
+                                <img class="slides w-full rounded-md" src="/images/games/babel/03.jpg" alt="Babel Screenshot 3">
+                                <img class="slides w-full rounded-md" src="/images/games/babel/04.jpg" alt="Babel Screenshot 4">
+                                <img class="slides w-full rounded-md" src="/images/games/babel/05.jpg" alt="Babel Screenshot 5">
+                            </div>
+                            <!-- Bottoni di navigazione centrati -->
+                            <div class="flex justify-center mt-2">
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-prev>&#10094;</button>
+                                </div>
+                                <div class="px-2 py-2">
+                                    <button class="bg-neutral-800 text-white p-2 rounded-full" data-next>&#10095;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="text-3xl text-center font-semibold mb-2">Babel</h4>
+                            <div class="text-gray-400 bg-neutral-800 py-2 px-4 rounded-lg">
+                                <div><strong class="text-white">Development Period:</strong> 2 days in 2021 </div>
+                                <div><strong class="text-white">Technologies:</strong> Unity, C#</div>
+                                <div><strong class="text-white">Team Size:</strong> 6</div>
+                            </div>
+                            <div class="text-gray-400 mt-5 ml-3 mr-3">
+                                <p>With a couple of other developers, I took part at the GMTK Game Jam 2021, 
+                                    which theme was "Joined Together", and developed "Babel", 
+                                    a puzzle game in which you have to attach various types of colorful humanoids 
+                                    to each other. Every character has its own weight and unique ways in which 
+                                    they distribute it, and your goal is to create the perfect-balanced tower and 
+                                    reach the top of the level!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
