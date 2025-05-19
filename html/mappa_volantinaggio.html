@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mappa Quartieri Padova</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="/styles/mappa_volantinaggio.css" />
+</head>
+
+<body>
+    <div id="map"></div>
+    <div class="legend" id="legend"><b>Quartieri:</b></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([45.4064, 11.8768], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        const colors = {};
+        const usedColors = new Set();
+        const colorList = [
+            '#e41a1c', '#377eb8', '#4daf4a', '#984ea3', '#ff7f00',
+            '#ffff33', '#a65628', '#f781bf', '#999999', '#66c2a5',
+            '#fc8d62', '#8da0cb', '#e78ac3', '#a6d854', '#ffd92f',
+            '#e5c494', '#b3b3b3'
+        ];
+
+        function addLabel(layer, text) {
+            const center = layer.getBounds().getCenter();
+            const label = L.marker(center, {
+                icon: L.divIcon({
+                    className: 'label',
+                    html: `<b>${text}</b>`,
+                    iconSize: [30, 20]
+                }),
+                interactive: false
+            });
+            label.addTo(map);
+        }
+
+        fetch('/resources/mappa_volantinaggio_clean.geojson')
+            .then(res => res.json())
+            .then(data => {
+                const legend = document.getElementById('legend');
+
+                L.geoJSON(data, {
+                    style: feature => {
+                        const q = feature.properties.quartiere;
+                        if (!colors[q]) {
+                            const c = colorList[usedColors.size % colorList.length];
+                            colors[q] = c;
+                            usedColors.add(c);
+                            legend.innerHTML += `
+                <div class="legend-item">
+                  <div class="legend-color" style="background:${c}"></div>
+                  ${q}
+                </div>`;
+                        }
+                        return {
+                            color: 'black',
+                            weight: 1,
+                            fillColor: colors[q],
+                            fillOpacity: 0.6
+                        };
+                    },
+                    onEachFeature: (feature, layer) => {
+                        const q = feature.properties.quartiere;
+                        const i = feature.properties.index;
+                        layer.bindPopup(`<b>${q}</b><br>Zona ${i}`);
+                        addLabel(layer, i);
+                    }
+                }).addTo(map);
+            });
+    </script>
+</body>
+
+</html>
