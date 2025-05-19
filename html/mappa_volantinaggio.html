@@ -11,6 +11,11 @@
 
 <body>
     <div id="map"></div>
+
+    <!-- Bottone toggle legenda -->
+    <button id="toggle-legend" title="Mostra/Nascondi legenda">☰</button>
+
+    <!-- Legenda -->
     <div class="legend" id="legend"><b>Quartieri:</b></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -76,6 +81,11 @@
                     }
                 }).addTo(map);
             });
+
+        // Toggle della legenda
+        document.getElementById('toggle-legend').addEventListener('click', () => {
+            document.getElementById('legend').classList.toggle('hidden');
+        });
     </script>
 </body>
 
